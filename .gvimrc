@@ -630,3 +630,7 @@ function MyDiff()
 endfunction
 
 colorscheme peachpuff
+
+" highlight word on double click
+" http://stackoverflow.com/questions/6876850/how-to-highlight-all-occurrences-of-a-word-in-vim-on-double-clicking
+map <2-LeftMouse> #*
