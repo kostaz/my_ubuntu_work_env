@@ -107,9 +107,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # kostaz: playing with bash prompt
-PS1="\w\n\$ "
+# THEIP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | head -n 1 | awk '{ print $1}')
+# PS1="\n[HP]["$THEIP"][\w]\n\n\$ "
+# PS1="\n[\w]\n\n\$ "
+# PS1="\n[\w] \$ "
 # PS1="$PS1 \n------->\$ "
-# PS1="\n\[\033[0;34m\]]\T \[\u@\H \w\n\$ "
+PS1="\n\[\033[0;34m\][\T][\[\u@\H]\n\n[\w]\n\n\$ "
 # PS1="\n\\[\033[0;36m\]\T \
 # [\[\033[1;34m\]\u@\H\[\033[0;37m\]\
 # \[\033[0;32m\]\[\033[1;30m\]] \n\[\033[1;36m\]\w \n\$ "
