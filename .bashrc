@@ -161,3 +161,4 @@ alias ra='repo forall -c '
 # http://stackoverflow.com/questions/5367068/clear-the-ubuntu-bash-screen-for-real
 alias cls='printf "\033c"'
 
+export LC_ALL="en_US.UTF-8"
