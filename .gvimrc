@@ -586,9 +586,9 @@ set so=1
 source ~/.vim/buff_select.vim
 source ~/.vim/hl_white_space.vim
 
-set tabstop=8
-set noexpandtab
-set shiftwidth=8
+set expandtab
+set shiftwidth=4
+set tabstop=4
 set smarttab
 
 " call ToggleShowWhitespace()
@@ -629,8 +629,15 @@ function MyDiff()
     silent execute "!diff -a --binary " . opt . v:fname_in . " " . v:fname_new . " > " . v:fname_out
 endfunction
 
-colorscheme peachpuff
+" colorscheme peachpuff
+colorscheme default
 
 " highlight word on double click
 " http://stackoverflow.com/questions/6876850/how-to-highlight-all-occurrences-of-a-word-in-vim-on-double-clicking
 map <2-LeftMouse> #*
+
+" disable code folding
+set nofoldenable
+
+" Ack search (like grep)
+nmap <leader>a :Ack<cr>
