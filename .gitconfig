@@ -17,3 +17,5 @@
 	prompt = false
 [alias]
 	d = difftool
+[core]
+	editor = gvim -f
