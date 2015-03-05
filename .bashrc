@@ -24,6 +24,7 @@ HISTTIMEFORMAT="[%F %T] "
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
 export HISTFILE=~/.bash_eternal_history
+export HISTSIZE
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
@@ -125,13 +126,15 @@ fi
 # PS1="\n[\w] \$ "
 # PS1="$PS1 \n------->\$ "
 # PS1="\n\[\033[0;34m\][\T][\[\u@\H]\n\n[\w]\n\n\$ "
-PS1="\n[\T][\[\u@\H][\w]\n\n\$ "
+# PS1="\n[\t][\[\u@\H]\n\n[\w]\n\n\$ " # THE BEST
+PS1="\n[\[\u@\H] [\w]\n\n\$ "
 # PS1="\n\\[\033[0;36m\]\T \
 # [\[\033[1;34m\]\u@\H\[\033[0;37m\]\
 # \[\033[0;32m\]\[\033[1;30m\]] \n\[\033[1;36m\]\w \n\$ "
 # PS1="[ ~~~~~~~~ \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h ~~~~~~~~ ]\w\$ "
 
-alias mkfind='find . -iname "*makefile*" -o \
+alias mkfind='find . -type f \
+                     -iname "*makefile*" -o \
 		     -iname "*kconfig*"  -o \
 		     -iname "*.mk" | xargs grep -inH --color=auto '
 
@@ -159,11 +162,10 @@ alias shfind='find . -iname "*.[h]" | xargs grep --color=auto -nH '
 alias gg='git grep -in --untracked '
 alias sgg='git grep -n --untracked '
 alias gs='git status'
-alias gdc='git diff --cached '
 alias gdc='git diff --cached --ignore-all-space '
-alias gdi='git diff --ignore-all-space '
-alias gd='git diff '
-alias gdi='git diff --ignore-all-space '
+alias gdcI='git diff --cached '
+alias gd='git diff --ignore-all-space '
+alias gdI='git diff '
 alias ga='git add '
 alias gb='git branch'
 
