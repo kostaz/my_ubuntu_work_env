@@ -331,10 +331,10 @@ map <right> :tabn<cr>
 map <left> :tabp<cr>
 
 " Tab configuration
-map <leader>tn :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+" "map <leader>tn :tabnew<cr>
+" "map <leader>te :tabedit
+" "map <leader>tc :tabclose<cr>
+" "map <leader>tm :tabmove
 
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
@@ -601,6 +601,7 @@ map <F8> :set list!<CR>
 
 " set guifont=Courier\ 10\ Pitch\ 10
 " set guifont=DejaVu\ Sans\ Mono\ 10
+" set guifont=Monospace\ 15
 set guifont=Ubuntu\ Mono\ 15
 
 map <F3> :cnext<CR>
@@ -641,3 +642,5 @@ set nofoldenable
 
 " Ack search (like grep)
 nmap <leader>a :Ack<cr>
+
+set linespace=3
