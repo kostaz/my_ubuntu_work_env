@@ -644,3 +644,5 @@ set nofoldenable
 nmap <leader>a :Ack<cr>
 
 set linespace=3
+
+au VimEnter * if &diff | execute 'windo set wrap' | endif
